@@ -1,5 +1,154 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    Layout = null;
 }
 
 
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Anasayfa</title>
+    @* <!--Pirasyonel Header-->
+    <!-- Favicons -->
+    <link href="/Pirasyonel/assets/img/favicon.png" rel="icon">
+    <link href="/Pirasyonel/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="/Pirasyonel/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/Pirasyonel/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/Pirasyonel/assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="/Pirasyonel/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="/Pirasyonel/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link href="/Pirasyonel/assets/css/main.css" rel="stylesheet">
+
+    *@<!--Pirasyonel Header Bitiş-->
+    <!--BizPage Header-->
+    <!-- Favicons -->
+    <link href="/BizPage/assets/img/favicon.png" rel="icon">
+    <link href="/BizPage/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    @* <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet"> *@
+
+    <!-- Vendor CSS Files -->
+    <link href="/BizPage/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="/BizPage/assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="/BizPage/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/BizPage/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/BizPage/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="/BizPage/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="/BizPage/assets/css/style.css" rel="stylesheet">
+    <!--BizPage Header Bitiş-->
+</head>
+<body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+        <div class="container-fluid">
+
+            <div class="row justify-content-center align-items-center">
+                <div class="col-xl-11 d-flex align-items-center justify-content-between">
+                    @*Buraya logo gelecek*@
+                    <h1 class="logo"><a href="/Home/Index">Pirasyonel</a></h1>
+                    <!-- Uncomment below if you prefer to use an image logo -->
+                    @* <a href="index.html" class="logo"><img src="~/Pirasyonel/assets/img/logo.png" alt="" class="img-fluid"></a> *@
+
+                    <nav id="navbar" class="navbar">
+                        <ul>
+                            <li><a class="nav-link scrollto active" href="/Home/Index">Anasayfa</a></li>
+                            <li><a class="nav-link scrollto" href="/WoodenStand/Index">Ahşap Stand</a></li>
+                            <li><a class="nav-link scrollto" href="/SystemStand/Index">Sistem Stand</a></li>
+                            <li><a class="nav-link scrollto " href="/About/Index">Hakkımızda</a></li>
+                            <li><a class="nav-link scrollto" href="/Contact/Index">İletişim</a></li>
+                        </ul>
+                        <i class="bi bi-list mobile-nav-toggle"></i>
+                    </nav><!-- .navbar -->
+                </div>
+            </div>
+
+        </div>
+    </header><!-- End Header -->
+    <!-- ======= hero Section ======= -->
+    <section id="hero">
+        <div class="hero-container">
+            <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+                <ol id="hero-carousel-indicators" class="carousel-indicators"></ol>
+
+                <div class="carousel-inner" role="listbox">
+
+                    <div class="carousel-item active" style="background-image: url(/BizPage/assets/img/hero-carousel/1.jpg)">
+                        @* <div class="carousel-container">
+                        <div class="container">
+                        <h2 class="animate__animated animate__fadeInDown">We are professional</h2>
+                        <p class="animate__animated animate__fadeInUp">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <a href="#featured-services" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
+                        </div>
+                        </div> *@
+                    </div>
+
+                    @*Alt satırlar üst taraf foreach içine alınıp database'den alındığında silinecek.*@
+                    <div class="carousel-item" style="background-image: url(/BizPage/assets/img/hero-carousel/2.jpg)">
+                        <div class="carousel-container">
+                            <div class="container">
+                                <h2 class="animate__animated animate__fadeInDown">At vero eos et accusamus</h2>
+                                <p class="animate__animated animate__fadeInUp">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut.</p>
+                                <a href="#featured-services" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item" style="background-image: url(/BizPage/assets/img/hero-carousel/3.jpg)">
+                        <div class="carousel-container">
+                            <div class="container">
+                                <h2 class="animate__animated animate__fadeInDown">Temporibus autem quibusdam</h2>
+                                <p class="animate__animated animate__fadeInUp">Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt omnis iste natus error sit voluptatem accusantium.</p>
+                                <a href="#featured-services" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item" style="background-image: url(/BizPage/assets/img/hero-carousel/4.jpg)">
+                        <div class="carousel-container">
+                            <div class="container">
+                                <h2 class="animate__animated animate__fadeInDown">Nam libero tempore</h2>
+                                <p class="animate__animated animate__fadeInUp">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum.</p>
+                                <a href="#featured-services" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item" style="background-image: url(/BizPage/assets/img/hero-carousel/5.jpg)">
+                        <div class="carousel-container">
+                            <div class="container">
+                                <h2 class="animate__animated animate__fadeInDown">Magnam aliquam quaerat</h2>
+                                <p class="animate__animated animate__fadeInUp">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                <a href="#featured-services" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                @* <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+                </a>
+
+                <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+                </a> *@
+
+            </div>
+        </div>
+    </section><!-- End Hero Section -->
+</body>
+</html>
