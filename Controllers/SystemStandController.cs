@@ -1,12 +1,16 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace PirasyonelWebsite.Controllers
+namespace PirasyonelWebsite.Controllers;
+
+public class SystemStandController : Controller
 {
-    public class SystemStandController : Controller
+    public IActionResult Index()
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
+        return View();
+    }
+
+    public IActionResult PortfolioDetail()
+    {
+        return View();
     }
 }
