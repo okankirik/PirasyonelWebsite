@@ -23,4 +23,9 @@ public class SystemStandController : Controller
     {
         return View();
     }
+
+    public IActionResult AdminSystemStandPage()
+    {
+        return View();
+    }
 }

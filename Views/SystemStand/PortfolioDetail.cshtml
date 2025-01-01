@@ -26,20 +26,20 @@
 
                 <div class="row gy-4">
 
-                    <div class="col-lg-8">
+                    <div class="col-lg-8 image-container">
                         <div class="portfolio-details-slider swiper">
                             <div class="swiper-wrapper align-items-center">
-
+                                
                                 <div class="swiper-slide">
-                                    <img src="~/BizPage/assets/img/portfolio/portfolio-details-1.jpg" alt="">
+                                    <img src="~/BizPage/assets/img/portfolio/portfolio-details-1.jpg" alt="" class="carousel-image">
                                 </div>
 
                                 <div class="swiper-slide">
-                                    <img src="~/BizPage/assets/img/portfolio/portfolio-details-2.jpg" alt="">
+                                    <img src="~/BizPage/assets/img/portfolio/portfolio-details-2.jpg" alt="" class="carousel-image">
                                 </div>
 
                                 <div class="swiper-slide">
-                                    <img src="~/BizPage/assets/img/portfolio/portfolio-details-3.jpg" alt="">
+                                    <img src="~/BizPage/assets/img/portfolio/portfolio-details-3.jpg" alt="" class="carousel-image">
                                 </div>
 
                             </div>
@@ -71,7 +71,75 @@
             </div>
         </section><!-- End Portfolio Details Section -->
 
+        <!-- Sayfanın sonuna eklenecek tam ekran carousel -->
+        <div class="fullscreen-carousel">
+            <span class="close-button">&times;</span>
+            <div class="swiper fullscreen-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="~/BizPage/assets/img/portfolio/portfolio-details-1.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="~/BizPage/assets/img/portfolio/portfolio-details-2.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="~/BizPage/assets/img/portfolio/portfolio-details-3.jpg" alt="">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+
     </main><!-- End #main -->
+
+    <!-- Sayfanın en altına eklenecek JavaScript kodu -->
+    @section Scripts {
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                // Normal slider
+                const portfolioSwiper = new Swiper('.portfolio-details-slider', {
+                    loop: true,
+                    pagination: {
+                        el: '.swiper-pagination'
+                    }
+                });
+
+                // Tam ekran slider
+                const fullscreenSwiper = new Swiper('.fullscreen-swiper', {
+                    loop: true,
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                    pagination: {
+                        el: '.swiper-pagination'
+                    }
+                });
+
+                // Carousel resimlerine tıklama olayı
+                document.querySelectorAll('.carousel-image').forEach((img, index) => {
+                    img.addEventListener('click', () => {
+                        document.querySelector('.fullscreen-carousel').style.display = 'block';
+                        fullscreenSwiper.slideTo(index + 1);
+                    });
+                });
+
+                // Kapatma düğmesi
+                document.querySelector('.close-button').addEventListener('click', () => {
+                    document.querySelector('.fullscreen-carousel').style.display = 'none';
+                });
+
+                // ESC tuşu ile kapatma
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape') {
+                        document.querySelector('.fullscreen-carousel').style.display = 'none';
+                    }
+                });
+            });
+        </script>
+    }
 
 </body>
 
