@@ -1,0 +1,61 @@
+﻿@model List<SystemStand>
+@{
+    ViewData["Title"] = "AdminSystemStandList";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+    <div class="content">
+        <div class="container-fluid">
+            @* <h4 class="page-title">Sistem Stand Listesi</h4> *@
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">Sistem Stand Listesi</div>
+                        </div>
+                        <div class="card-body">@* 
+							<div class="card-sub">
+								This is the basic table view of the ready dashboard :
+							</div> *@
+                            <table class="table mt-3">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Firma Adı</th>
+                                        <th scope="col">Görsel 1</th>
+                                        <th scope="col">Görsel 2</th>
+                                        <th scope="col">Görsel 3</th>
+                                        <th scope="col">Görsel 4</th>
+                                        <th scope="col">Görsel 5</th>
+                                        <th scope="col">Güncelle</th>
+                                        <th scope="col">Sil</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>@item.Id</td>
+                                            <td>@item.StandName</td>
+                                            <td><img src="@item.Image1" alt="" height="120" /></td>
+                                            <td><img src="@item.Image2" alt="" height="120" /></td>
+                                            <td><img src="@item.Image3" alt="" height="120" /></td>
+                                            <td><img src="@item.Image4" alt="" height="120" /></td>
+                                            <td><img src="@item.Image5" alt="" height="120" /></td>
+                                            <td><a href="/SystemStand/UpdateSystemStand/@item.Id" class="btn btn-success">Güncelle</a></td>
+                                            <td><a href="/SystemStand/DeleteSystemStand/@item.Id" class="btn btn-danger">Sil</a></td>
+                                        </tr>
+
+                                    }
+                                </tbody>
+                            </table>
+                            <td><a href="/SystemStand/CreateSystemStand/" class="btn btn-primary">Yeni Stand Ekle</a></td>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
