@@ -24,4 +24,9 @@
     <None Include="wwwroot\Ready-Bootstrap-Dashboard-master\.DS_Store" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\images\WoodenStand\" />
+    <Folder Include="wwwroot\images\SystemStand\" />
+  </ItemGroup>
+
 </Project>
