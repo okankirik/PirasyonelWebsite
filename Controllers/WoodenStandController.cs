@@ -18,5 +18,16 @@ namespace PirasyonelWebsite.Controllers
             return View(values);
         }
 
+        public IActionResult PortfolioDetail()
+        {
+            return View();
+        }
+
+        public IActionResult AdminWoodenStandList()
+        {
+            var values = _context.woodenStands.ToList();
+            return View(values);
+        }
+
     }
 }
