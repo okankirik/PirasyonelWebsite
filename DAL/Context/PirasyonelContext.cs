@@ -14,4 +14,5 @@ public class PirasyonelContext : DbContext
     public DbSet<Contact> contacts { get; set; }
     public DbSet<SystemStand> systemStands { get; set; }
     public DbSet<WoodenStand> woodenStands { get; set; }
+    public DbSet<SocailMedia> socailMedias { get; set; }
 }
